@@ -138,6 +138,9 @@ Games use the rest of a group as wrong options when the answer is in it.
 - `sound`: put `[ ]` around the letters whose sound changes (`[c]ity`), list
   the possible `sounds` as `[{ "id": "s", "label": { "en": "s, as in sun", "fi": "..." } }]`
   and give each word its `sound` id. Learners pick the sound.
+- `pairs`: words that sound alike, without brackets. Each word names the
+  other word of its pair in `pair` (`ship` → `"pair": "sheep"`). Learners
+  hear one and pick between the two.
 - `letters`: each word is a letter (`"A"`, no brackets). Learners hear the
   letter name and pick the letter.
 
