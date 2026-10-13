@@ -192,6 +192,10 @@ speakers, shown by games after an answer. Only when there is a real trap.
 - `sentences`: whole everyday sentences and questions (`word` items).
 - `grammar`, `mixed-up-words`, `word-groups`, `pronunciation`: as named.
 - `texts`: `text` items.
+- `games-and-pop-culture`: every item type on video games, tabletop
+  role-playing, internet culture and pop culture (categories `video-games`,
+  `tabletop-rpg`, `internet-culture`, `pop-culture`; an item can have several).
+  Facts in it must be checkable: years, places and names.
 
 ## After writing
 
