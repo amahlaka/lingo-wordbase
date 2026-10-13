@@ -6,7 +6,10 @@
     "word-groups",
     "grammar",
     "mixed-up-words",
-    "pronunciation"
+    "pronunciation",
+    "more-words",
+    "sentences",
+    "texts"
   ],
   "categories": {
     "adjective": {
@@ -21,6 +24,14 @@
       "en": "Bedroom",
       "fi": "Makuuhuone"
     },
+    "body": {
+      "en": "Body",
+      "fi": "Keho"
+    },
+    "clothes": {
+      "en": "Clothes",
+      "fi": "Vaatteet"
+    },
     "commuting": {
       "en": "Commuting",
       "fi": "Työmatka"
@@ -28,6 +39,14 @@
     "drink": {
       "en": "Drinks",
       "fi": "Juomat"
+    },
+    "family": {
+      "en": "Family",
+      "fi": "Perhe"
+    },
+    "feelings": {
+      "en": "Feelings",
+      "fi": "Tunteet"
     },
     "food": {
       "en": "Food",
@@ -41,6 +60,10 @@
       "en": "Hanging out",
       "fi": "Ajanviete"
     },
+    "health": {
+      "en": "Health",
+      "fi": "Terveys"
+    },
     "home": {
       "en": "Home",
       "fi": "Koti"
@@ -52,6 +75,10 @@
     "money": {
       "en": "Money",
       "fi": "Raha"
+    },
+    "nature": {
+      "en": "Nature",
+      "fi": "Luonto"
     },
     "people": {
       "en": "People",
@@ -97,9 +124,21 @@
       "en": "Transport",
       "fi": "Liikenne"
     },
+    "travel": {
+      "en": "Travel",
+      "fi": "Matkailu"
+    },
     "verb": {
       "en": "Verbs",
       "fi": "Verbit"
+    },
+    "weather": {
+      "en": "Weather",
+      "fi": "Sää"
+    },
+    "work": {
+      "en": "Work",
+      "fi": "Työ"
     }
   }
 }

@@ -3,7 +3,11 @@
 Everything the [Lingo](https://github.com/amahlaka/lingo-hangman) games
 practise lives here as JSON: words and phrases, fill-the-gap sentences,
 grammar rules, words that get mixed up, word groups, pronunciation lessons,
-and the list of languages. This repository holds only data; the app and its deploy pipeline
+short texts, and the list of languages.
+
+**Adding or changing entries? Read [AUTHORING.md](AUTHORING.md) first.** It
+says who the entries are for, how to write the English and Finnish, and how to
+fill in levels and metadata. This repository holds only data; the app and its deploy pipeline
 live in lingo-hangman, so access to edit words never gives access to code.
 
 ```
@@ -56,7 +60,18 @@ into the standard layout (one item per line).
 
 Every item has an `id` (lower case, numbers and dashes, unique across all
 packs; keep it once it is live) and a `type`. Optional on every type:
-`level` (1, 2 or 3). Words and gap sentences can have `categories`. Text
+`level` (1, 2 or 3). Words, gap sentences and texts can have `categories`.
+
+Optional metadata, for picking items and for the learner's statistics (the
+allowed values are listed in [AUTHORING.md](AUTHORING.md)):
+
+- `features`: what the item shows about English (`"th-sound"`,
+  `"present-perfect"`, `"phrasal-verb"`…), any type.
+- `contexts`: where a learner meets it (`"shopping"`, `"work"`…), any type.
+- `register`: `"formal"` or `"informal"`; leave out for neutral.
+- `ipa` (words): `{ "en-GB": "/ˈwɔːtə/" }`, IPA between slashes.
+- `pos` (words): part of speech, or `"phrase"` / `"sentence"`.
+- `note` (words and texts): `{ "en", "fi" }`, a trap for Finnish speakers. Text
 in several languages is an object keyed by language code:
 `{ "en": "...", "fi": "..." }`.
 
@@ -65,7 +80,8 @@ in several languages is an object keyed by language code:
 ```json
 { "id": "bus-stop", "type": "word",
   "text": { "en": "bus stop", "fi": "bussipysäkki", "sv": "busshållplats" },
-  "categories": ["commuting"],
+  "ipa": { "en-GB": "/ˈbʌs stɒp/" }, "pos": "noun",
+  "categories": ["commuting"], "features": ["compound"], "contexts": ["transport"], "level": 1,
   "examples": [{ "en": "I'll wait at the bus stop.", "fi": "Odotan bussipysäkillä." }] }
 ```
 
@@ -147,7 +163,26 @@ Games use the rest of a group as wrong options when the answer is in it.
 Every lesson needs at least three words. `say` is how a Finn would write the
 sound (`naif`); `meaning` is the Finnish meaning; `note` (`{ "en", "fi" }`)
 explains an exception. `speak` (optional) is what the voice reads instead of
-the word, for a word a voice gets wrong.
+the word, for a word a voice gets wrong. `ipa` (optional) is the word's IPA as
+a string, like `"/naɪf/"`.
+
+### `text`: several sentences that belong together
+
+```json
+{ "id": "at-the-cafe", "type": "text", "kind": "dialogue",
+  "title": { "en": "At the café", "fi": "Kahvilassa" },
+  "sentences": [
+    { "speaker": "Server", "en": "Hi, what can I get you?", "fi": "Hei, mitä saisi olla?" },
+    { "speaker": "Anna", "en": "Could I have a latte, please?", "fi": "Saisinko latten, kiitos?" }],
+  "questions": [{ "question": { "en": "What does Anna drink?", "fi": "Mitä Anna juo?" },
+    "answers": ["a latte"], "distractors": ["a tea", "an orange juice"] }],
+  "categories": ["food"], "level": 1 }
+```
+
+`kind` is one of `dialogue` (every sentence names its `speaker`), `story`,
+`message`, `email`, `notice`, `instructions` or `description`. For reading
+and listening games; the sentences are also used as sentence material.
+`questions` (optional) can be answered from the text.
 
 ## Packs, categories and languages
 

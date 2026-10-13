@@ -12,6 +12,13 @@
     {"id":"pronouns","type":"group","title":{"en":"Pronouns","fi":"Pronominit"},"words":["I","me","my","you","your","he","she","it","we","they","him","her","us","them"]},
     {"id":"question-words","type":"group","title":{"en":"Question words","fi":"Kysymyssanat"},"words":["what","where","when","how","who","why","which"]},
     {"id":"amounts","type":"group","title":{"en":"Amounts","fi":"Määrät"},"words":["much","many","lot","more","few"]},
-    {"id":"numbers","type":"group","title":{"en":"Numbers","fi":"Numerot"},"words":["one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","twenty","quarter","half"]}
+    {"id":"numbers","type":"group","title":{"en":"Numbers","fi":"Numerot"},"words":["one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","twenty","quarter","half"]},
+    {"id":"modal-verbs","type":"group","title":{"en":"Modal verbs","fi":"Modaaliverbit"},"words":["could","should","must","might","may","shall"]},
+    {"id":"possessive-pronouns","type":"group","title":{"en":"mine, yours, ours","fi":"mine, yours, ours"},"words":["mine","yours","his","hers","ours","theirs"]},
+    {"id":"self-words","type":"group","title":{"en":"myself, yourself","fi":"myself, yourself"},"words":["myself","yourself","himself","herself","itself","ourselves","themselves"]},
+    {"id":"quantity-words","type":"group","title":{"en":"any, every, each, all","fi":"any, every, each, all"},"words":["any","every","each","all","both","none"]},
+    {"id":"linking-words","type":"group","title":{"en":"Linking words","fi":"Sidesanat"},"words":["and","but","or","so","because","although","until"]},
+    {"id":"how-often","type":"group","title":{"en":"How often","fi":"Kuinka usein"},"words":["always","usually","often","sometimes","never","rarely"]},
+    {"id":"place-words","type":"group","title":{"en":"Where things are","fi":"Missä asiat ovat"},"words":["under","behind","between","above","opposite","inside","next"]}
   ]
 }
