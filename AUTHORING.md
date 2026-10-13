@@ -162,6 +162,23 @@ notices) or `informal` (friends, chat messages).
 `{ "en": "...", "fi": "..." }`: one or two sentences on a trap for Finnish
 speakers, shown by games after an answer. Only when there is a real trap.
 
+### English examples in explanations and notes
+
+In the Finnish text of an `explanation` or `note`, put every English example
+between asterisks: letters, words, phrases and whole example sentences, and
+the Finnish-style readings of sounds (*ii*, *ai*, *saiens*). The games show
+them in colour so the example stands out from the description:
+
+```
+Kun sana alkaa kirjaimilla *kn*, *k* jätetään sanomatta. Sanotaan vain *n*, joten *know* kuulostaa samalta kuin *no*.
+```
+
+Mark whole phrases as one (*beat a level*, not *beat* *a* *level*), keep
+Finnish words outside the marks (*Varattu* stays plain), and keep endings
+and punctuation outside: *c*:n, *does*-sanaa, *Do you like tea*? The
+English text needs no marks, as everything in it is English. Every `*` must
+have a partner; the check reports one left on its own.
+
 ## Item types and the games that use them
 
 - `word`: Word Hangman, Pick the meaning, Listen and choose, Say it, Word
