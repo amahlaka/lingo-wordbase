@@ -2,8 +2,8 @@
 
 Everything the [Lingo](https://github.com/amahlaka/lingo-hangman) games
 practise lives here as JSON: words and phrases, fill-the-gap sentences,
-grammar rules, words that get mixed up, word groups, and the list of
-languages. This repository holds only data; the app and its deploy pipeline
+grammar rules, words that get mixed up, word groups, pronunciation lessons,
+and the list of languages. This repository holds only data; the app and its deploy pipeline
 live in lingo-hangman, so access to edit words never gives access to code.
 
 ```
@@ -121,6 +121,33 @@ Each word can have a `meaning` and a `note`.
 ```
 
 Games use the rest of a group as wrong options when the answer is in it.
+
+### `sound`: a pronunciation lesson
+
+```json
+{ "id": "silent-k", "type": "sound", "kind": "silent",
+  "title": { "en": "Silent k in kn", "fi": "Äänetön k: kn" },
+  "explanation": { "en": "...", "fi": "..." },
+  "words": [{ "text": "[k]nife", "say": { "fi": "naif" }, "meaning": { "fi": "veitsi" } }] }
+```
+
+`kind` decides the question the Sounds of English game asks:
+
+- `silent`: put `[ ]` around the letters you don't say (`[k]nife`,
+  `ni[gh]t`). Learners tap the letter they don't hear.
+- `sound`: put `[ ]` around the letters whose sound changes (`[c]ity`), list
+  the possible `sounds` as `[{ "id": "s", "label": { "en": "s, as in sun", "fi": "..." } }]`
+  and give each word its `sound` id. Learners pick the sound.
+- `pairs`: words that sound alike, without brackets. Each word names the
+  other word of its pair in `pair` (`ship` → `"pair": "sheep"`). Learners
+  hear one and pick between the two.
+- `letters`: each word is a letter (`"A"`, no brackets). Learners hear the
+  letter name and pick the letter.
+
+Every lesson needs at least three words. `say` is how a Finn would write the
+sound (`naif`); `meaning` is the Finnish meaning; `note` (`{ "en", "fi" }`)
+explains an exception. `speak` (optional) is what the voice reads instead of
+the word, for a word a voice gets wrong.
 
 ## Packs, categories and languages
 
