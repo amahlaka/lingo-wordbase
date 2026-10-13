@@ -72,6 +72,32 @@ One of: `noun`, `verb`, `adjective`, `adverb`, `pronoun`, `preposition`,
 isn't a whole sentence: "next stop", "in the morning"), `sentence` (a whole
 sentence or question, with or without the full stop).
 
+### `wordTypes` (sentences and rule examples)
+
+For whole sentences and phrases (`pos` `sentence` or `phrase`, and `examples`
+of `rule` items): what each word is, so games can label the places in the
+sentence, show word types and colour words. One entry per word of the English
+text, in order. Words are counted as the games split them: at spaces, with
+punctuation at the ends dropped (`I'm`, `wake-up` and `o'clock` are one word,
+a lone `&` is none). The check reports a count that doesn't match.
+
+Each entry is a word class: `noun`, `pronoun` (also my, this, some, every),
+`verb`, `auxiliary` (do/does/did, will, would, can, could, should, must, and
+be or have when they help another verb: *is* running, *have* lost), `adjective`,
+`adverb`, `article` (a, an, the), `preposition`, `conjunction`, `number`,
+`question` (what, where, how…), `particle` (to before a verb, and the off/up/out
+of a phrasal verb) or `interjection` (please, thanks, sorry). Contractions take
+the class of their first part (`I'm` pronoun, `don't` auxiliary, `let's` verb).
+
+Add `:subject` or `:object` to the main word of the subject and of the
+object: `["article", "noun:subject", "verb", "article", "noun:object"]` for
+"The man opens the door". "There" in there is / there are is the subject.
+Leave roles out of fragments that have no subject ("in the morning").
+
+```json
+"wordTypes": ["auxiliary", "pronoun:subject", "verb", "pronoun:object"]
+```
+
 ### `features`
 
 What this entry shows about English, so games can pick items that practise
@@ -189,6 +215,11 @@ have a partner; the check reports one left on its own.
   believable: the same part of speech, a typical Finnish mistake.
 - `rule` + `gap` with `topic`: Grammar check. A new rule needs at least six
   gap sentences.
+- `rule` with an id starting `sentence-`: how English sentences are built
+  (subject, verb, object; questions; there is…), shown by Build the phrase and
+  its sentence rules page. No gap sentences; give each two or three
+  `examples` with `wordTypes`. The app picks which rule a sentence practises
+  from its `wordTypes`, so a new one also needs an app change.
 - `confusable` + `gap` with `topic`: Mixed-up words. At least six sentences,
   roughly balanced between the words.
 - `group`: wrong options for grammar-word gaps in Fill the Gap.
