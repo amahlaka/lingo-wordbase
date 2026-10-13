@@ -70,6 +70,7 @@ allowed values are listed in [AUTHORING.md](AUTHORING.md)):
 - `contexts`: where a learner meets it (`"shopping"`, `"work"`…), any type.
 - `register`: `"formal"` or `"informal"`; leave out for neutral.
 - `ipa` (words): `{ "en-GB": "/ˈwɔːtə/" }`, IPA between slashes.
+- `say` (words): `{ "fi": "wooter" }`, the English read the Finnish way.
 - `pos` (words): part of speech, or `"phrase"` / `"sentence"`.
 - `wordTypes` (sentences and rule examples): what each word is, one entry per
   word: `["article", "noun:subject", "verb", "adjective"]`.

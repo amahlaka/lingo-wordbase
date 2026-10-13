@@ -62,8 +62,22 @@ stress with ˈ before the stressed syllable, and secondary with ˌ. Use
 `/ə/` for weak vowels and long-vowel marks (ː). Add `"en"` for US
 pronunciation only when it differs clearly (`/ˈwɑːtɚ/`). For a phrase, write
 it as it is said in normal speech, words separated by spaces:
-`/ˈnekst ˈstɒp/`. Don't add IPA to whole sentences. If you are not sure of a
-pronunciation, leave `ipa` out: wrong IPA is worse than none.
+`/ˈnekst ˈstɒp/`. Say it shows the IPA under every word and sentence of up to
+four words, so give those IPA too (`/ˈhaʊ ˈmʌtʃ ɪz ˈðɪs/`); leave it off longer
+sentences. If you are not sure of a pronunciation, leave `ipa` out: wrong IPA
+is worse than none.
+
+### `say` (word items)
+
+`{ "fi": "wooter" }`: how the English is read by a Finn who reads it as
+Finnish, the paid hint in Say it (and shown after answering). Write it from
+the British IPA the way Sounds of English writes `say.fi`: long sounds doubled
+(`ii`, `uu`, `aa`, `oo`, `öö` for /ɜː/), `ä` for /æ/, `a` for /ʌ/, `e` for /ə/,
+`ei ai oi ou au` for the diphthongs, `š tš ž dž` for /ʃ tʃ ʒ dʒ/, `th` for
+/θ/ and `dh` for /ð/, `ng` for /ŋ/. British English drops the r after a
+vowel, so leave it out ("kaa" for *car*), except in a weak ending spelt with
+an r, which reads `er` ("wooter", "kaler"). Words separated by spaces.
+Give every item that has `ipa` and four words or fewer a `say`.
 
 ### `pos` (word items)
 
