@@ -9,7 +9,8 @@
     "pronunciation",
     "more-words",
     "sentences",
-    "texts"
+    "texts",
+    "games-and-pop-culture"
   ],
   "categories": {
     "adjective": {
@@ -139,6 +140,22 @@
     "work": {
       "en": "Work",
       "fi": "Työ"
+    },
+    "video-games": {
+      "en": "Video games",
+      "fi": "Videopelit"
+    },
+    "tabletop-rpg": {
+      "en": "Tabletop role-playing",
+      "fi": "Pöytäroolipelit"
+    },
+    "internet-culture": {
+      "en": "Internet culture",
+      "fi": "Nettikulttuuri"
+    },
+    "pop-culture": {
+      "en": "Pop culture",
+      "fi": "Popkulttuuri"
     }
   }
 }
