@@ -62,8 +62,22 @@ stress with ˈ before the stressed syllable, and secondary with ˌ. Use
 `/ə/` for weak vowels and long-vowel marks (ː). Add `"en"` for US
 pronunciation only when it differs clearly (`/ˈwɑːtɚ/`). For a phrase, write
 it as it is said in normal speech, words separated by spaces:
-`/ˈnekst ˈstɒp/`. Don't add IPA to whole sentences. If you are not sure of a
-pronunciation, leave `ipa` out: wrong IPA is worse than none.
+`/ˈnekst ˈstɒp/`. Say it shows the IPA under every word and sentence of up to
+four words, so give those IPA too (`/ˈhaʊ ˈmʌtʃ ɪz ˈðɪs/`); leave it off longer
+sentences. If you are not sure of a pronunciation, leave `ipa` out: wrong IPA
+is worse than none.
+
+### `say` (word items)
+
+`{ "fi": "wooter" }`: how the English is read by a Finn who reads it as
+Finnish, the paid hint in Say it (and shown after answering). Write it from
+the British IPA the way Sounds of English writes `say.fi`: long sounds doubled
+(`ii`, `uu`, `aa`, `oo`, `öö` for /ɜː/), `ä` for /æ/, `a` for /ʌ/, `e` for /ə/,
+`ei ai oi ou au` for the diphthongs, `š tš ž dž` for /ʃ tʃ ʒ dʒ/, `th` for
+/θ/ and `dh` for /ð/, `ng` for /ŋ/. British English drops the r after a
+vowel, so leave it out ("kaa" for *car*), except in a weak ending spelt with
+an r, which reads `er` ("wooter", "kaler"). Words separated by spaces.
+Give every item that has `ipa` and four words or fewer a `say`.
 
 ### `pos` (word items)
 
@@ -71,6 +85,32 @@ One of: `noun`, `verb`, `adjective`, `adverb`, `pronoun`, `preposition`,
 `conjunction`, `determiner`, `number`, `interjection`, `phrase` (a chunk that
 isn't a whole sentence: "next stop", "in the morning"), `sentence` (a whole
 sentence or question, with or without the full stop).
+
+### `wordTypes` (sentences and rule examples)
+
+For whole sentences and phrases (`pos` `sentence` or `phrase`, and `examples`
+of `rule` items): what each word is, so games can label the places in the
+sentence, show word types and colour words. One entry per word of the English
+text, in order. Words are counted as the games split them: at spaces, with
+punctuation at the ends dropped (`I'm`, `wake-up` and `o'clock` are one word,
+a lone `&` is none). The check reports a count that doesn't match.
+
+Each entry is a word class: `noun`, `pronoun` (also my, this, some, every),
+`verb`, `auxiliary` (do/does/did, will, would, can, could, should, must, and
+be or have when they help another verb: *is* running, *have* lost), `adjective`,
+`adverb`, `article` (a, an, the), `preposition`, `conjunction`, `number`,
+`question` (what, where, how…), `particle` (to before a verb, and the off/up/out
+of a phrasal verb) or `interjection` (please, thanks, sorry). Contractions take
+the class of their first part (`I'm` pronoun, `don't` auxiliary, `let's` verb).
+
+Add `:subject` or `:object` to the main word of the subject and of the
+object: `["article", "noun:subject", "verb", "article", "noun:object"]` for
+"The man opens the door". "There" in there is / there are is the subject.
+Leave roles out of fragments that have no subject ("in the morning").
+
+```json
+"wordTypes": ["auxiliary", "pronoun:subject", "verb", "pronoun:object"]
+```
 
 ### `features`
 
@@ -189,6 +229,11 @@ have a partner; the check reports one left on its own.
   believable: the same part of speech, a typical Finnish mistake.
 - `rule` + `gap` with `topic`: Grammar check. A new rule needs at least six
   gap sentences.
+- `rule` with an id starting `sentence-`: how English sentences are built
+  (subject, verb, object; questions; there is…), shown by Build the phrase and
+  its sentence rules page. No gap sentences; give each two or three
+  `examples` with `wordTypes`. The app picks which rule a sentence practises
+  from its `wordTypes`, so a new one also needs an app change.
 - `confusable` + `gap` with `topic`: Mixed-up words. At least six sentences,
   roughly balanced between the words.
 - `group`: wrong options for grammar-word gaps in Fill the Gap.
