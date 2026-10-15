@@ -227,6 +227,15 @@ have a partner; the check reports one left on its own.
   whole sentences, each with Finnish.
 - `gap` without `topic`: Fill the Gap. Distractors must be clearly wrong but
   believable: the same part of speech, a typical Finnish mistake.
+- `decoyPool` (gap, rule, confusable): extra wrong options that fill a
+  question's free slots after the item's own distractors (up to four options
+  in all), picked at random each time. A pool on a `rule` or `confusable`
+  covers every gap sentence of that topic, so **every word in it must be
+  wrong in every one of those sentences**; check each sentence, not just the
+  first. Watch for words that are also correct (*that* in a who/which
+  sentence, *did* in a do/does question, *they* for a person): leave them out,
+  or give that sentence its own `decoyPool` (`[]` for none). Pair topics
+  (borrow/lend, a/an, for/since) have no pool: they stay two-way choices.
 - `rule` + `gap` with `topic`: Grammar check. A new rule needs at least six
   gap sentences.
 - `rule` with an id starting `sentence-`: how English sentences are built
@@ -238,7 +247,10 @@ have a partner; the check reports one left on its own.
   roughly balanced between the words.
 - `group`: wrong options for grammar-word gaps in Fill the Gap.
 - `sound`: Sounds of English. At least six words per lesson; `say.fi` is a
-  Finnish-style spelling of the sound (naif), `meaning.fi` the meaning.
+  Finnish-style spelling of the sound (naif), `meaning.fi` the meaning. In
+  `kind: "sound"` lessons a sound's `label` is only its name ("d", "Quiet
+  th"); the game shows an example word from the lesson next to it, never the
+  word being asked, so give every sound at least two words, better four.
 - `text`: several sentences that belong together, for reading and listening
   games to come. Kinds: `dialogue` (every line has a `speaker`), `story`,
   `message` (a chat message or text), `email`, `notice` (a sign or

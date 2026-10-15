@@ -111,6 +111,14 @@ sentence. `""` in either list means "no word" (no article, for example).
 `topic` links the sentence to a `rule` or `confusable` item, whose
 explanation the game can show.
 
+Questions have up to four options. The item's own distractors are always
+shown; free slots are filled at random from a `decoyPool` list, so the
+options change from round to round. The pool is the item's own
+`"decoyPool": ["he", "him", "she"]` or else its topic's (`decoyPool` on the
+`rule` or `confusable` item). `"decoyPool": []` on an item turns its topic's
+pool off. Pool words that are one of the item's answers, or already in the
+sentence, are skipped, and at the start of a sentence they get a capital.
+
 ### `rule`: a grammar rule
 
 ```json
@@ -155,8 +163,11 @@ Games use the rest of a group as wrong options when the answer is in it.
 - `silent`: put `[ ]` around the letters you don't say (`[k]nife`,
   `ni[gh]t`). Learners tap the letter they don't hear.
 - `sound`: put `[ ]` around the letters whose sound changes (`[c]ity`), list
-  the possible `sounds` as `[{ "id": "s", "label": { "en": "s, as in sun", "fi": "..." } }]`
-  and give each word its `sound` id. Learners pick the sound.
+  the possible `sounds` as `[{ "id": "s", "label": { "en": "s", "fi": "s" } }]`
+  and give each word its `sound` id. Learners pick the sound. The label is
+  just the sound's name; the game adds "as in" and a word of the lesson with
+  that sound, never the word being asked, so every sound needs at least two
+  words (four or more gives variety).
 - `pairs`: words that sound alike, without brackets. Each word names the
   other word of its pair in `pair` (`ship` → `"pair": "sheep"`). Learners
   hear one and pick between the two.
