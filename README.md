@@ -69,7 +69,7 @@ allowed values are listed in [AUTHORING.md](AUTHORING.md)):
   `"present-perfect"`, `"phrasal-verb"`…), any type.
 - `contexts`: where a learner meets it (`"shopping"`, `"work"`…), any type.
 - `register`: `"formal"` or `"informal"`; leave out for neutral.
-- `ipa` (words): `{ "en-GB": "/ˈwɔːtə/" }`, IPA between slashes.
+- `ipa` (words): `{ "en": "/ˈwɑːt̬ɚ/", "en-GB": "/ˈwɔːtə/" }`, US and British IPA between slashes.
 - `say` (words): `{ "fi": "wooter" }`, the English read the Finnish way.
 - `pos` (words): part of speech, or `"phrase"` / `"sentence"`.
 - `wordTypes` (sentences and rule examples): what each word is, one entry per
@@ -83,13 +83,13 @@ in several languages is an object keyed by language code:
 ```json
 { "id": "bus-stop", "type": "word",
   "text": { "en": "bus stop", "fi": "bussipysäkki", "sv": "busshållplats" },
-  "ipa": { "en-GB": "/ˈbʌs stɒp/" }, "pos": "noun",
+  "ipa": { "en": "/ˈbʌs stɑːp/", "en-GB": "/ˈbʌs stɒp/" }, "pos": "noun",
   "categories": ["commuting"], "features": ["compound"], "contexts": ["transport"], "level": 1,
   "examples": [{ "en": "I'll wait at the bus stop.", "fi": "Odotan bussipysäkillä." }] }
 ```
 
-`text.en` is required. Add `en-GB` only when the British spelling differs
-(`"color"` / `"colour"`); British English falls back to `en`. `time` (clock
+`text.en` (US English) is required. Add `en-GB` only when the British form
+differs (`"color"` / `"colour"`); British English falls back to `en`. `time` (clock
 phrases only) lists the times it describes, like `["09:00", "21:00"]`.
 `examples` are whole sentences using the word; games use them as sentence
 material.

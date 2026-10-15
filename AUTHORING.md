@@ -13,9 +13,10 @@ Write for real adult life in Finland and abroad: work, shops, travel, the
 doctor, small talk, messages. Avoid childish topics, slang that dates fast,
 and anything political, religious, sexual or about violence.
 
-- **English** is British English by default. Add `en-GB` only when British
-  spelling differs from `en` (US); otherwise put the British form in `en`
-  only if it is also correct US English, else give both.
+- **English** is US (American) English: US spelling (color, center,
+  traveled) and US words (apartment, elevator, cell phone, vacation). Add
+  `en-GB` only when the British form differs (`"en": "color", "en-GB":
+  "colour"`); British English falls back to `en`.
 - **Finnish** is natural standard Finnish (yleiskieli), the way an adult would
   say it, not word-for-word. Use the spoken form only in a dialogue between
   friends, and then mark the item `register: "informal"`.
@@ -56,27 +57,33 @@ text items `features` and `contexts`.
 
 ### `ipa` (word items)
 
-`{ "en-GB": "/ˈwɔːtə/" }`: British (Received Pronunciation) IPA between
-slashes, as in the Cambridge or Oxford Learner's dictionaries. Mark primary
-stress with ˈ before the stressed syllable, and secondary with ˌ. Use
-`/ə/` for weak vowels and long-vowel marks (ː). Add `"en"` for US
-pronunciation only when it differs clearly (`/ˈwɑːtɚ/`). For a phrase, write
-it as it is said in normal speech, words separated by spaces:
-`/ˈnekst ˈstɒp/`. Say it shows the IPA under every word and sentence of up to
-four words, so give those IPA too (`/ˈhaʊ ˈmʌtʃ ɪz ˈðɪs/`); leave it off longer
-sentences. If you are not sure of a pronunciation, leave `ipa` out: wrong IPA
-is worse than none.
+`{ "en": "/ˈwɑːt̬ɚ/", "en-GB": "/ˈwɔːtə/" }`: US IPA under `en`, and British
+(Received Pronunciation) IPA under `en-GB`, between slashes, as in the
+Cambridge Learner's Dictionary. Give `en` to every word with IPA; `en-GB` is
+optional. Mark primary stress with ˈ before the stressed syllable, and
+secondary with ˌ. US IPA uses /ɚ/ for a weak r-vowel (*water*, *doctor*),
+/ɝː/ for a stressed one (*bird*, *work*), /r/ after vowels (*car* /kɑːr/),
+/oʊ/ (*go*), /ɑː/ in *hot* and *stop*, /æ/ in *dance* and *ask*, and /t̬/ for
+a t said like a quick d (*water*, *better*, *party*). Use `/ə/` for weak
+vowels and long-vowel marks (ː), no syllable dots. For a phrase, write it as
+it is said in normal speech, words separated by spaces: `/ˈnekst ˈstɑːp/`.
+Say it shows the IPA under every word and sentence of up to four words, so
+give those IPA too (`/ˈhaʊ ˈmʌtʃ ɪz ˈðɪs/`); leave it off longer sentences.
+The recorded speech reads a single word from its `en` IPA, so a word whose
+sound depends on its meaning (*live*, *close*, *read*) must have the IPA of
+the meaning the item teaches. If you are not sure of a pronunciation, leave
+`ipa` out: wrong IPA is worse than none.
 
 ### `say` (word items)
 
-`{ "fi": "wooter" }`: how the English is read by a Finn who reads it as
+`{ "fi": "waader" }`: how the US English is read by a Finn who reads it as
 Finnish, the paid hint in Say it (and shown after answering). Write it from
-the British IPA the way Sounds of English writes `say.fi`: long sounds doubled
-(`ii`, `uu`, `aa`, `oo`, `öö` for /ɜː/), `ä` for /æ/, `a` for /ʌ/, `e` for /ə/,
-`ei ai oi ou au` for the diphthongs, `š tš ž dž` for /ʃ tʃ ʒ dʒ/, `th` for
-/θ/ and `dh` for /ð/, `ng` for /ŋ/. British English drops the r after a
-vowel, so leave it out ("kaa" for *car*), except in a weak ending spelt with
-an r, which reads `er` ("wooter", "kaler"). Words separated by spaces.
+the US IPA the way Sounds of English writes `say.fi`: long sounds doubled
+(`ii`, `uu`, `aa`, `oo`), `ä` for /æ/, `a` for /ʌ/, `e` for /ə/, `ör` for
+/ɝː/ and `er` for /ɚ/, `ei ai oi ou au` for the diphthongs, `š tš ž dž` for
+/ʃ tʃ ʒ dʒ/, `th` for /θ/ and `dh` for /ð/, `ng` for /ŋ/, and `d` for the
+quick t (/t̬/). US English says the r after a vowel, so keep it ("kaar" for
+*car*, "böörd" for *bird*, "waader" for *water*). Words separated by spaces.
 Give every item that has `ipa` and four words or fewer a `say`.
 
 ### `pos` (word items)
@@ -138,7 +145,7 @@ Spelling
 
 - `irregular-spelling`: spelling far from the sound: enough, Wednesday.
 - `double-letter`: double consonants that don't make a long sound: coffee, letter.
-- `uk-us-spelling`: British and US spelling differ: colour / color.
+- `uk-us-spelling`: US and British spelling differ: color / colour.
 - `homophone`: sounds like another word: right / write.
 
 Grammar
@@ -177,7 +184,7 @@ Vocabulary and use
 - `idiom`: the meaning isn't the sum of the words: It's a piece of cake.
 - `compound`: two words making one: bus stop, toothbrush.
 - `polite-form`: a polite request or softener: Could I…, I'd like…
-- `uk-us-word`: a different word in British and US English: flat / apartment.
+- `uk-us-word`: a different word in US and British English: apartment / flat.
 - `cognate`: almost the same in Finnish, an easy win: taxi, hotel, banana.
 
 ### `contexts`
