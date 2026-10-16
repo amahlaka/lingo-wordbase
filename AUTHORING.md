@@ -197,7 +197,8 @@ Where the learner would meet or use this: `home`, `work`, `study`,
 
 `categories` are different: they are the topic chips learners pick as focus
 areas (food, time, home…). Use existing categories where they fit and add a
-new one only with its English and Finnish name in `index.json`.
+new one only with its English and Finnish name in `index.json`, and put it in
+one of the `categoryGroups` there (the headings of the focus area list).
 
 ### `register`
 
@@ -280,6 +281,11 @@ have a partner; the check reports one left on its own.
   role-playing, internet culture and pop culture (categories `video-games`,
   `tabletop-rpg`, `internet-culture`, `pop-culture`; an item can have several).
   Facts in it must be checkable: years, places and names.
+- `video-and-media`: every item type on video editing, editing software
+  (DaVinci Resolve and the words its interface uses) and media studies
+  (categories `video-editing`, `editing-software`, `media-studies`). Name
+  real interface parts exactly as the program shows them (Media Pool,
+  Deliver page, Render All).
 
 ## After writing
 

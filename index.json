@@ -10,7 +10,8 @@
     "more-words",
     "sentences",
     "texts",
-    "games-and-pop-culture"
+    "games-and-pop-culture",
+    "video-and-media"
   ],
   "categories": {
     "adjective": {
@@ -156,6 +157,122 @@
     "pop-culture": {
       "en": "Pop culture",
       "fi": "Popkulttuuri"
+    },
+    "video-editing": {
+      "en": "Video editing",
+      "fi": "Videoeditointi"
+    },
+    "editing-software": {
+      "en": "Editing software",
+      "fi": "Editointiohjelmat"
+    },
+    "media-studies": {
+      "en": "Media studies",
+      "fi": "Mediatutkimus"
     }
-  }
+  },
+  "categoryGroups": [
+    {
+      "id": "everyday",
+      "title": {
+        "en": "Everyday life",
+        "fi": "Arki"
+      },
+      "categories": [
+        "greeting",
+        "politeness",
+        "important",
+        "time",
+        "weather",
+        "food",
+        "drink",
+        "shopping",
+        "money",
+        "clothes"
+      ]
+    },
+    {
+      "id": "home",
+      "title": {
+        "en": "Home",
+        "fi": "Koti"
+      },
+      "categories": [
+        "home",
+        "rooms",
+        "bedroom",
+        "bathroom"
+      ]
+    },
+    {
+      "id": "people",
+      "title": {
+        "en": "People and health",
+        "fi": "Ihmiset ja terveys"
+      },
+      "categories": [
+        "people",
+        "family",
+        "relationships",
+        "feelings",
+        "hanging-out",
+        "body",
+        "health"
+      ]
+    },
+    {
+      "id": "out-and-about",
+      "title": {
+        "en": "Out and about",
+        "fi": "Liikkeellä"
+      },
+      "categories": [
+        "places",
+        "transport",
+        "commuting",
+        "travel",
+        "nature"
+      ]
+    },
+    {
+      "id": "work-and-media",
+      "title": {
+        "en": "Work and media",
+        "fi": "Työ ja media"
+      },
+      "categories": [
+        "work",
+        "video-editing",
+        "editing-software",
+        "media-studies"
+      ]
+    },
+    {
+      "id": "hobbies",
+      "title": {
+        "en": "Games and pop culture",
+        "fi": "Pelit ja popkulttuuri"
+      },
+      "categories": [
+        "video-games",
+        "tabletop-rpg",
+        "internet-culture",
+        "pop-culture"
+      ]
+    },
+    {
+      "id": "word-types",
+      "title": {
+        "en": "Kinds of words",
+        "fi": "Sanaluokat ja fraasit"
+      },
+      "categories": [
+        "phrases",
+        "questions",
+        "verb",
+        "adjective",
+        "pronoun"
+      ]
+    }
+  ]
 }
