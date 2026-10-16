@@ -208,6 +208,11 @@ A pack is `{ "id", "title": { "en", "fi" }, "items": [...] }` in
 `index.json` `categories` gives each category its English and Finnish name
 for the category chips. A category without one shows as written.
 
+`index.json` `categoryGroups` sorts the categories under headings in the
+focus area list: `[{ "id", "title": { "en", "fi" }, "categories": [...] }]`,
+in the order shown. Each category belongs to one group; a category left out
+is shown under "Other".
+
 `languages.json` lists `{ "code", "label", "alphabet", "fallback" }`.
 `alphabet` is the hangman keyboard's letters; `fallback` is the language to
 use for words without their own text (only `en-GB` uses it).
