@@ -258,12 +258,15 @@ have a partner; the check reports one left on its own.
   `kind: "sound"` lessons a sound's `label` is only its name ("d", "Quiet
   th"); the game shows an example word from the lesson next to it, never the
   word being asked, so give every sound at least two words, better four.
-- `text`: several sentences that belong together, for reading and listening
-  games to come. Kinds: `dialogue` (every line has a `speaker`), `story`,
+- `text`: several sentences that belong together, for Read and understand,
+  Your turn (dialogues) and listening games. Kinds: `dialogue` (every line has a `speaker`), `story`,
   `message` (a chat message or text), `email`, `notice` (a sign or
   announcement), `instructions`, `description`. 3-10 sentences. Add two or
   three `questions` that can be answered from the text, each with a short
-  `answers` list and two or three believable `distractors`.
+  `answers` list and two or three believable `distractors`. In a dialogue set
+  `you` to the speaker a Finnish learner would be (the customer, the patient,
+  the person asking the way), usually the one with a Finnish name; Your turn
+  lets the learner play them and pick each of their lines.
 
 ## Packs
 
