@@ -183,7 +183,7 @@ a string, like `"/naɪf/"`.
 ### `text`: several sentences that belong together
 
 ```json
-{ "id": "at-the-cafe", "type": "text", "kind": "dialogue",
+{ "id": "at-the-cafe", "type": "text", "kind": "dialogue", "you": "Anna",
   "title": { "en": "At the café", "fi": "Kahvilassa" },
   "sentences": [
     { "speaker": "Server", "en": "Hi, what can I get you?", "fi": "Hei, mitä saisi olla?" },
@@ -196,7 +196,9 @@ a string, like `"/naɪf/"`.
 `kind` is one of `dialogue` (every sentence names its `speaker`), `story`,
 `message`, `email`, `notice`, `instructions` or `description`. For reading
 and listening games; the sentences are also used as sentence material.
-`questions` (optional) can be answered from the text.
+`questions` (optional) can be answered from the text; Read and understand asks
+them. In a dialogue, `you` (optional) names the speaker the learner plays in
+Your turn; without it they play the second speaker.
 
 ## Packs, categories and languages
 
