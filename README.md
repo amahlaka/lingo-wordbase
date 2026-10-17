@@ -168,6 +168,10 @@ Games use the rest of a group as wrong options when the answer is in it.
   just the sound's name; the game adds "as in" and a word of the lesson with
   that sound, never the word being asked, so every sound needs at least two
   words (four or more gives variety).
+- `spell`: put `[ ]` around the letters the learner picks (`ba[ck]`, `[sch]ool`)
+  and list the spellings to choose from in `spellings` (`["ck", "k"]`); the
+  bracketed letters must be one of them. Learners hear the word, see it with
+  the letters left out and its Finnish meaning, and pick the spelling.
 - `pairs`: words that sound alike, without brackets. Each word names the
   other word of its pair in `pair` (`ship` → `"pair": "sheep"`). Learners
   hear one and pick between the two.
