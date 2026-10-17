@@ -259,6 +259,10 @@ have a partner; the check reports one left on its own.
   `kind: "sound"` lessons a sound's `label` is only its name ("d", "Quiet
   th"); the game shows an example word from the lesson next to it, never the
   word being asked, so give every sound at least two words, better four.
+  `kind: "spell"` lessons practise writing a sound (ck or k, ch or tch, sch,
+  sk or sh): the bracketed letters are left out and the learner picks them
+  from `spellings`. Give each spelling at least three words, and a `note` on
+  a word that breaks the lesson's rule (*much*, *rich*).
 - `text`: several sentences that belong together, for Read and understand,
   Your turn (dialogues) and listening games. Kinds: `dialogue` (every line has a `speaker`), `story`,
   `message` (a chat message or text), `email`, `notice` (a sign or
