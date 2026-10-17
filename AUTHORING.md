@@ -205,6 +205,16 @@ one of the `categoryGroups` there (the headings of the focus area list).
 Hobby and special-field topics (games, video editing…) go in a group marked
 `"optIn": true`, so they only come up for learners who choose them.
 
+### `otherOrders` (sentences)
+
+`{ "en": ["Please take off your shoes."] }`: the same words as the text in
+another order that is just as natural, so Build the phrase accepts it. Add it
+when a learner could build a right sentence that the game would call wrong,
+most often a phrasal verb with a noun object: *turn the lights off* and *turn
+off the lights*. Not with a pronoun object: only *turn them off* is right.
+"Please" at the start or end needs no entry; the game accepts it at either
+end. The check reports an order with other words or the text's own order.
+
 ### `register`
 
 `neutral` (default, leave out), `formal` (emails to strangers, official
