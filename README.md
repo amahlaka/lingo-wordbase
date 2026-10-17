@@ -74,6 +74,9 @@ allowed values are listed in [AUTHORING.md](AUTHORING.md)):
 - `pos` (words): part of speech, or `"phrase"` / `"sentence"`.
 - `wordTypes` (sentences and rule examples): what each word is, one entry per
   word: `["article", "noun:subject", "verb", "adjective"]`.
+- `otherOrders` (sentences): `{ "en": ["Please take off your shoes."] }`,
+  the same words in another order that is just as right. Build the phrase
+  accepts them.
 - `note` (words and texts): `{ "en", "fi" }`, a trap for Finnish speakers. Text
 in several languages is an object keyed by language code:
 `{ "en": "...", "fi": "..." }`.
