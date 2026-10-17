@@ -17,6 +17,9 @@ and anything political, religious, sexual or about violence.
   traveled) and US words (apartment, elevator, cell phone, vacation). Add
   `en-GB` only when the British form differs (`"en": "color", "en-GB":
   "colour"`); British English falls back to `en`.
+  Learners only ever see the US form, so notes, explanations and texts teach
+  US English and never mention British words, spellings or pronunciations:
+  two ways of saying one thing confuse learners.
 - **Finnish** is natural standard Finnish (yleiskieli), the way an adult would
   say it, not word-for-word. Use the spoken form only in a dialogue between
   friends, and then mark the item `register: "informal"`.
