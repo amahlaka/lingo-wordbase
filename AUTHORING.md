@@ -269,6 +269,12 @@ have a partner; the check reports one left on its own.
 - `confusable` + `gap` with `topic`: Mixed-up words. At least six sentences,
   roughly balanced between the words.
 - `group`: wrong options for grammar-word gaps in Fill the Gap.
+- `alike` (pack `same-answers`): words the answer checks treat as the same.
+  `kind: "sound"` for words Say it can't hear apart (to / too / two, their /
+  there); `kind: "spelling"` for a word with two right spellings (color /
+  colour), accepted by Say it and Type it. List the US spelling first. Never
+  put two different words under `spelling`: Type it would accept the wrong
+  one.
 - `sound`: Sounds of English. At least six words per lesson; `say.fi` is a
   Finnish-style spelling of the sound (naif), `meaning.fi` the meaning. In
   `kind: "sound"` lessons a sound's `label` is only its name ("d", "Quiet
@@ -312,4 +318,4 @@ have a partner; the check reports one left on its own.
    copy (`node scripts/check-content.mjs path/to/lingo-wordbase`).
 2. Run `npm run content:format` (or format by hand: one item per line).
 3. Read every Finnish sentence once more as a Finn would say it, and every
-   English one as a Brit would. Fix anything stiff.
+   English one as an American would. Fix anything stiff.
