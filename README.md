@@ -211,7 +211,10 @@ for the category chips. A category without one shows as written.
 `index.json` `categoryGroups` sorts the categories under headings in the
 focus area list: `[{ "id", "title": { "en", "fi" }, "categories": [...] }]`,
 in the order shown. Each category belongs to one group; a category left out
-is shown under "Other".
+is shown under "Other". A group with `"optIn": true` holds hobby and niche
+topics: their items only come up for learners who pick one of those
+categories as a focus area. Everyday topics stay in the mix by default, so
+put a new pack for a hobby or a special field in an opt-in group.
 
 `languages.json` lists `{ "code", "label", "alphabet", "fallback" }`.
 `alphabet` is the hangman keyboard's letters; `fallback` is the language to

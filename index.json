@@ -235,17 +235,27 @@
       ]
     },
     {
-      "id": "work-and-media",
+      "id": "work",
       "title": {
-        "en": "Work and media",
-        "fi": "Työ ja media"
+        "en": "Work",
+        "fi": "Työ"
       },
       "categories": [
-        "work",
+        "work"
+      ]
+    },
+    {
+      "id": "media",
+      "title": {
+        "en": "Video and media",
+        "fi": "Video ja media"
+      },
+      "categories": [
         "video-editing",
         "editing-software",
         "media-studies"
-      ]
+      ],
+      "optIn": true
     },
     {
       "id": "hobbies",
@@ -258,7 +268,8 @@
         "tabletop-rpg",
         "internet-culture",
         "pop-culture"
-      ]
+      ],
+      "optIn": true
     },
     {
       "id": "word-types",
