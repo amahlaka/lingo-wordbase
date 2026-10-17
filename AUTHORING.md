@@ -199,6 +199,8 @@ Where the learner would meet or use this: `home`, `work`, `study`,
 areas (food, time, home…). Use existing categories where they fit and add a
 new one only with its English and Finnish name in `index.json`, and put it in
 one of the `categoryGroups` there (the headings of the focus area list).
+Hobby and special-field topics (games, video editing…) go in a group marked
+`"optIn": true`, so they only come up for learners who choose them.
 
 ### `register`
 
