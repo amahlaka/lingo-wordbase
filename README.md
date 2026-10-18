@@ -212,6 +212,22 @@ of a sound the learner missed. `symbols` are IPA sounds as written in the
 words' `ipa`, without slashes; `example` (optional) is a word with the sound;
 `lesson` (optional) is the id of a `sound` lesson that practises it.
 
+### `passage`: a sentence or two to read aloud
+
+```json
+{ "id": "passage-three-things", "type": "passage",
+  "text": { "en": "I have three things to do this Thursday.", "fi": "Minulla on kolme asiaa tehtävänä tänä torstaina." },
+  "ipa": { "en": "/aɪ ˈhæv ˈθriː ˈθɪŋz tə ˈduː ðɪs ˈθɝːzdeɪ/" },
+  "say": { "fi": "ai häv thrii thingz te duu dhis thöörzdei" },
+  "level": 2, "features": ["th-sound", "z-sound"], "contexts": ["home"] }
+```
+
+Say it right's Read aloud scores a whole reading word by word and sound by
+sound. `text.en` is one or two sentences of at most 30 words; `ipa.en`
+(required) is its US IPA with exactly one IPA word for every English word
+(the check counts both); `say.fi` (optional) is the Finnish-style reading
+shown on a tap. Pack `read-aloud`.
+
 ### `text`: several sentences that belong together
 
 ```json
