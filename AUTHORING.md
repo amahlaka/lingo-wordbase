@@ -244,7 +244,7 @@ have a partner; the check reports one left on its own.
 
 ## Item types and the games that use them
 
-- `word`: Word Hangman, Pick the meaning, Listen and choose, Say it, Say it right (words with `ipa`), Word
+- `word`: Word Hangman, Pick the meaning, Listen and choose, Say it, Say it right (words with `ipa`; its Read aloud uses `passage` items), Word
   Pairs (single words and short phrases), Build the phrase and Fill the Gap
   (whole sentences, 3-9 words work best). Add `examples` to useful words:
   whole sentences, each with Finnish.
@@ -293,6 +293,18 @@ have a partner; the check reports one left on its own.
   sentences, and names the Finnish sound it is mixed up with; `example` is a
   common word with the sound; `lesson` (optional) is the id of the Sounds of
   English lesson that practises it.
+- `passage` (pack `read-aloud`): one or two everyday sentences (at most 30
+  words) for Say it right's Read aloud, which scores every word and sound of
+  the reading and finds the learner's weak sounds. Write sentences a learner
+  would really say, with the sounds Finns find hard (th, w and v, z, sh, ch
+  and j, schwa) and name them in `features`. `ipa.en` is required: the whole
+  passage as said in normal speech, with weak forms where a native speaker
+  uses them (/ə/ for *a*, /ðə/ for *the*, /tə/ for *to*, /ən/ for *and*,
+  /wəz/ for *was*), stress marks on the stressed words, and exactly one IPA
+  word for each English word, counted as `wordTypes` counts them
+  (*thirty-three* and *That's* are one word each). Give `say.fi` too, written
+  as for `word` items. Avoid abbreviations with a full stop (*Mr.*): the
+  check counts sentences by their full stops.
 - `text`: several sentences that belong together, for Read and understand,
   Your turn (dialogues) and listening games. Kinds: `dialogue` (every line has a `speaker`), `story`,
   `message` (a chat message or text), `email`, `notice` (a sign or
@@ -310,6 +322,7 @@ have a partner; the check reports one left on its own.
 - `everyday-sentences`: everyday gap sentences.
 - `sentences`: whole everyday sentences and questions (`word` items).
 - `grammar`, `mixed-up-words`, `word-groups`, `pronunciation`: as named.
+- `read-aloud`: `passage` items for Say it right's Read aloud.
 - `texts`: `text` items.
 - `games-and-pop-culture`: every item type on video games, tabletop
   role-playing, internet culture and pop culture (categories `video-games`,
