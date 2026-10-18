@@ -2,8 +2,8 @@
 
 Everything the [Lingo](https://github.com/amahlaka/lingo-hangman) games
 practise lives here as JSON: words and phrases, fill-the-gap sentences,
-grammar rules, words that get mixed up, word groups, pronunciation lessons,
-short texts, and the list of languages.
+grammar rules, words that get mixed up, word groups, pronunciation lessons
+and tips, short texts, and the list of languages.
 
 **Adding or changing entries? Read [AUTHORING.md](AUTHORING.md) first.** It
 says who the entries are for, how to write the English and Finnish, and how to
@@ -197,6 +197,20 @@ sound (`naif`); `meaning` is the Finnish meaning; `note` (`{ "en", "fi" }`)
 explains an exception. `speak` (optional) is what the voice reads instead of
 the word, for a word a voice gets wrong. `ipa` (optional) is the word's IPA as
 a string, like `"/naɪf/"`.
+
+### `phone`: how to say one sound
+
+```json
+{ "id": "phone-th-quiet", "type": "phone", "symbols": ["θ"],
+  "title": { "en": "Quiet th, as in think", "fi": "Soinniton th, kuten sanassa think" },
+  "tip": { "en": "Put the tip of your tongue lightly between your teeth and blow.", "fi": "..." },
+  "example": "think", "lesson": "th-sounds" }
+```
+
+Say it right scores every sound of a word from its US `ipa` and shows the tip
+of a sound the learner missed. `symbols` are IPA sounds as written in the
+words' `ipa`, without slashes; `example` (optional) is a word with the sound;
+`lesson` (optional) is the id of a `sound` lesson that practises it.
 
 ### `text`: several sentences that belong together
 

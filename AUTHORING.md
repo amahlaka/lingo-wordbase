@@ -244,7 +244,7 @@ have a partner; the check reports one left on its own.
 
 ## Item types and the games that use them
 
-- `word`: Word Hangman, Pick the meaning, Listen and choose, Say it, Word
+- `word`: Word Hangman, Pick the meaning, Listen and choose, Say it, Say it right (words with `ipa`), Word
   Pairs (single words and short phrases), Build the phrase and Fill the Gap
   (whole sentences, 3-9 words work best). Add `examples` to useful words:
   whole sentences, each with Finnish.
@@ -284,6 +284,15 @@ have a partner; the check reports one left on its own.
   sk or sh): the bracketed letters are left out and the learner picks them
   from `spellings`. Give each spelling at least three words, and a `note` on
   a word that breaks the lesson's rule (*much*, *rich*).
+- `phone` (pack `pronunciation`): a tip on saying one English sound, which
+  Say it right shows when a learner's score shows they missed it. `symbols`
+  are the IPA sounds it covers, written exactly as in the words' US `ipa`
+  without slashes (`θ`, `tʃ`, `ɚ`, `oʊ`, `t̬`; length marks don't matter, so
+  `iː` also covers `i`). One tip per sound: the game uses the first tip that
+  lists it. `tip` says what to do with the tongue, lips or voice in one or two
+  sentences, and names the Finnish sound it is mixed up with; `example` is a
+  common word with the sound; `lesson` (optional) is the id of the Sounds of
+  English lesson that practises it.
 - `text`: several sentences that belong together, for Read and understand,
   Your turn (dialogues) and listening games. Kinds: `dialogue` (every line has a `speaker`), `story`,
   `message` (a chat message or text), `email`, `notice` (a sign or
