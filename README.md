@@ -152,6 +152,17 @@ Each word can have a `meaning` and a `note`.
 
 Games use the rest of a group as wrong options when the answer is in it.
 
+### `alike`: words that count as the same answer
+
+```json
+{ "id": "sound-to-too-two", "type": "alike", "kind": "sound", "words": ["to", "too", "two"] }
+{ "id": "spelling-color", "type": "alike", "kind": "spelling", "words": ["color", "colour"] }
+```
+
+`kind` is `sound` (said the same, so Say it accepts any of them) or
+`spelling` (two right ways to write one word, so Say it and Type it accept
+either). One word each, at least two. Learners never see these items.
+
 ### `sound`: a pronunciation lesson
 
 ```json
