@@ -233,6 +233,8 @@ shown on a tap. Pack `read-aloud`.
 ```json
 { "id": "at-the-cafe", "type": "text", "kind": "dialogue", "you": "Anna",
   "title": { "en": "At the café", "fi": "Kahvilassa" },
+  "scene": { "en": "You are at the counter in a café. You want a coffee and something to eat.",
+    "fi": "Olet kahvilan tiskillä. Haluat kahvin ja jotain syötävää." },
   "sentences": [
     { "speaker": "Server", "en": "Hi, what can I get you?", "fi": "Hei, mitä saisi olla?" },
     { "speaker": "Anna", "en": "Could I have a latte, please?", "fi": "Saisinko latten, kiitos?" }],
@@ -246,7 +248,10 @@ shown on a tap. Pack `read-aloud`.
 and listening games; the sentences are also used as sentence material.
 `questions` (optional) can be answered from the text; Read and understand asks
 them. In a dialogue, `you` (optional) names the speaker the learner plays in
-Your turn; without it they play the second speaker.
+Your turn; without it they play the second speaker. `scene` (optional,
+dialogues only, `{ "en", "fi" }`, both required) is the situation Your turn
+shows above the conversation: where the learner is, who they talk to and what
+they want.
 
 ## Packs, categories and languages
 

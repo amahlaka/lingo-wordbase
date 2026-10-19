@@ -313,7 +313,13 @@ have a partner; the check reports one left on its own.
   `answers` list and two or three believable `distractors`. In a dialogue set
   `you` to the speaker a Finnish learner would be (the customer, the patient,
   the person asking the way), usually the one with a Finnish name; Your turn
-  lets the learner play them and pick each of their lines.
+  lets the learner play them and pick each of their lines. Give every
+  dialogue a `scene` in English and Finnish: one or two short sentences
+  to the learner as *you*, saying where they are, who they talk to and what
+  they want ("You are on a street in a town you don't know. You need a
+  pharmacy, so you stop a woman to ask the way."). Your turn mixes in lines
+  from other dialogues as wrong replies, so the scene must make it clear
+  which one fits here. Don't give away the learner's lines word for word.
 
 ## Packs
 
