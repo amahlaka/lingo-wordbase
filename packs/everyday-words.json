@@ -44,7 +44,7 @@
     {"id":"blanket","type":"word","text":{"en":"blanket","fi":"peitto"},"categories":["home","bedroom"],"ipa":{"en":"/ˈblæŋkɪt/","en-GB":"/ˈblæŋkɪt/"},"pos":"noun","contexts":["home","hotel"],"level":2,"say":{"fi":"blänkit"}},
     {"id":"pillow","type":"word","text":{"en":"pillow","fi":"tyyny"},"categories":["home","bedroom"],"ipa":{"en":"/ˈpɪloʊ/","en-GB":"/ˈpɪləʊ/"},"pos":"noun","features":["double-letter"],"contexts":["home","hotel"],"level":2,"say":{"fi":"pilou"}},
     {"id":"toilet","type":"word","text":{"en":"toilet","fi":"vessa"},"categories":["home","rooms"],"ipa":{"en":"/ˈtɔɪlət/","en-GB":"/ˈtɔɪlət/"},"pos":"noun","features":["cognate"],"contexts":["home","travel"],"level":1,"say":{"fi":"toilet"}},
-    {"id":"hall","type":"word","text":{"en":"hall","fi":"eteinen"},"categories":["home","rooms"],"ipa":{"en":"/hɑːl/","en-GB":"/hɔːl/"},"pos":"noun","contexts":["home"],"level":2,"say":{"fi":"haal"}},
+    {"id":"hall","type":"word","text":{"en":"hall","fi":"eteinen, käytävä"},"categories":["home","rooms"],"ipa":{"en":"/hɑːl/","en-GB":"/hɔːl/"},"pos":"noun","contexts":["home"],"level":2,"say":{"fi":"haal"}},
     {"id":"balcony","type":"word","text":{"en":"balcony","fi":"parveke"},"categories":["home","rooms"],"ipa":{"en":"/ˈbælkəni/","en-GB":"/ˈbælkəni/"},"pos":"noun","features":["cognate"],"contexts":["home"],"level":2,"say":{"fi":"bälkeni"}},
     {"id":"garage","type":"word","text":{"en":"garage","fi":"autotalli"},"categories":["home","rooms"],"ipa":{"en":"/ɡəˈrɑːʒ/","en-GB":"/ˈɡærɑːʒ/"},"pos":"noun","features":["z-sound","cognate"],"contexts":["home"],"level":2,"say":{"fi":"geraaž"}},
     {"id":"attic","type":"word","text":{"en":"attic","fi":"ullakko"},"categories":["home","rooms"],"ipa":{"en":"/ˈæt̬ɪk/","en-GB":"/ˈætɪk/"},"pos":"noun","contexts":["home"],"level":3,"say":{"fi":"ädik"}},
@@ -73,6 +73,6 @@
     {"id":"hospital","type":"word","text":{"en":"hospital","fi":"sairaala"},"categories":["important","places"],"ipa":{"en":"/ˈhɑːspɪt̬əl/","en-GB":"/ˈhɒspɪtl/"},"pos":"noun","features":["cognate"],"contexts":["health","emergency"],"level":1,"say":{"fi":"haaspidel"}},
     {"id":"bacon-and-eggs","type":"word","text":{"en":"Bacon and eggs","fi":"Pekonia ja kananmunia"},"categories":["food"],"ipa":{"en":"/ˌbeɪkən ənd ˈeɡz/","en-GB":"/ˌbeɪkən ənd ˈeɡz/"},"pos":"phrase","features":["linking","weak-form"],"contexts":["eating-out"],"level":2,"wordTypes":["noun","conjunction","noun"],"say":{"fi":"beiken end egz"}},
     {"id":"bread","type":"word","text":{"en":"bread","fi":"leipä"},"categories":["food","shopping"],"ipa":{"en":"/bred/","en-GB":"/bred/"},"pos":"noun","features":["uncountable","irregular-spelling"],"contexts":["shopping","home"],"level":1,"say":{"fi":"bred"}},
-    {"id":"new-gap-1","type":"gap","lang":"en","sentence":"They ___ gone home already.","answers":["should've","should have"],"distractors":["should of"],"translation":{"fi":"Heidän olisi pitänyt lähteä kotiin jo."},"level":3,"decoyPool":["should","should had","should has"]}
+    {"id":"new-gap-1","type":"gap","lang":"en","sentence":"They ___ gone home already.","answers":["should've","should have"],"distractors":["should of"],"translation":{"fi":"Heidän olisi pitänyt lähteä kotiin jo."},"level":3,"decoyPool":["should","should had","should has"],"features":["modal-verb","contraction"],"contexts":["social"]}
   ]
 }
