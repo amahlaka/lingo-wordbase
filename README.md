@@ -85,7 +85,7 @@ in several languages is an object keyed by language code:
 
 ```json
 { "id": "bus-stop", "type": "word",
-  "text": { "en": "bus stop", "fi": "bussipysäkki", "sv": "busshållplats" },
+  "text": { "en": "bus stop", "fi": "bussipysäkki" },
   "ipa": { "en": "/ˈbʌs stɑːp/", "en-GB": "/ˈbʌs stɒp/" }, "pos": "noun",
   "categories": ["commuting"], "features": ["compound"], "contexts": ["transport"], "level": 1,
   "examples": [{ "en": "I'll wait at the bus stop.", "fi": "Odotan bussipysäkillä." }] }
@@ -271,6 +271,8 @@ put a new pack for a hobby or a special field in an opt-in group.
 
 `languages.json` lists `{ "code", "label", "alphabet", "fallback" }`.
 `alphabet` is the hangman keyboard's letters; `fallback` is the language to
-use for words without their own text (only `en-GB` uses it).
+use for words without their own text (only `en-GB` uses it). The word base
+is English and Finnish for now; another language (Japanese, say) is added
+by listing it here and giving items a `text` in its code.
 
 The checks are in lingo-hangman's `src/lib/contentSchema.js`.
