@@ -7,8 +7,8 @@
   "items": [
     {"id":"i","type":"word","text":{"en":"I","fi":"minä"},"categories":["pronoun","people"],"ipa":{"en":"/aɪ/","en-GB":"/aɪ/"},"pos":"pronoun","contexts":["social"],"level":1,"say":{"fi":"ai"}},
     {"id":"you","type":"word","text":{"en":"you","fi":"sinä"},"categories":["pronoun","people"],"ipa":{"en":"/juː/","en-GB":"/juː/"},"pos":"pronoun","contexts":["social"],"level":1,"say":{"fi":"juu"}},
-    {"id":"he","type":"word","text":{"en":"he","fi":"hän"},"categories":["pronoun","people"],"ipa":{"en":"/hiː/","en-GB":"/hiː/"},"pos":"pronoun","features":["pronoun-gender"],"contexts":["social"],"level":1,"say":{"fi":"hii"}},
-    {"id":"she","type":"word","text":{"en":"she","fi":"hän"},"categories":["pronoun","people"],"ipa":{"en":"/ʃiː/","en-GB":"/ʃiː/"},"pos":"pronoun","features":["pronoun-gender","sh-ch-j-sound"],"contexts":["social"],"level":1,"say":{"fi":"šii"}},
+    {"id":"he","type":"word","text":{"en":"he","fi":"hän (mies)"},"categories":["pronoun","people"],"ipa":{"en":"/hiː/","en-GB":"/hiː/"},"pos":"pronoun","features":["pronoun-gender"],"contexts":["social"],"level":1,"say":{"fi":"hii"}},
+    {"id":"she","type":"word","text":{"en":"she","fi":"hän (nainen)"},"categories":["pronoun","people"],"ipa":{"en":"/ʃiː/","en-GB":"/ʃiː/"},"pos":"pronoun","features":["pronoun-gender","sh-ch-j-sound"],"contexts":["social"],"level":1,"say":{"fi":"šii"}},
     {"id":"we","type":"word","text":{"en":"we","fi":"me"},"categories":["pronoun","people"],"ipa":{"en":"/wiː/","en-GB":"/wiː/"},"pos":"pronoun","features":["w-v-sound"],"contexts":["social"],"level":1,"say":{"fi":"wii"}},
     {"id":"they","type":"word","text":{"en":"they","fi":"he"},"categories":["pronoun","people"],"ipa":{"en":"/ðeɪ/","en-GB":"/ðeɪ/"},"pos":"pronoun","features":["th-sound"],"contexts":["social"],"level":1,"say":{"fi":"dhei"}},
     {"id":"man","type":"word","text":{"en":"man","fi":"mies"},"categories":["people"],"ipa":{"en":"/mæn/","en-GB":"/mæn/"},"pos":"noun","features":["irregular-plural"],"contexts":["social"],"level":1,"say":{"fi":"män"}},
@@ -73,6 +73,6 @@
     {"id":"hospital","type":"word","text":{"en":"hospital","fi":"sairaala"},"categories":["important","places"],"ipa":{"en":"/ˈhɑːspɪt̬əl/","en-GB":"/ˈhɒspɪtl/"},"pos":"noun","features":["cognate"],"contexts":["health","emergency"],"level":1,"say":{"fi":"haaspidel"}},
     {"id":"bacon-and-eggs","type":"word","text":{"en":"Bacon and eggs","fi":"Pekonia ja kananmunia"},"categories":["food"],"ipa":{"en":"/ˌbeɪkən ənd ˈeɡz/","en-GB":"/ˌbeɪkən ənd ˈeɡz/"},"pos":"phrase","features":["linking","weak-form"],"contexts":["eating-out"],"level":2,"wordTypes":["noun","conjunction","noun"],"say":{"fi":"beiken end egz"}},
     {"id":"bread","type":"word","text":{"en":"bread","fi":"leipä"},"categories":["food","shopping"],"ipa":{"en":"/bred/","en-GB":"/bred/"},"pos":"noun","features":["uncountable","irregular-spelling"],"contexts":["shopping","home"],"level":1,"say":{"fi":"bred"}},
-    {"id":"new-gap-1","type":"gap","lang":"en","sentence":"They ___ gone home already","answers":["should've","should have"],"distractors":["should of"],"translation":{"fi":"Heidän olisi pitänyt mennä jo kotiin"},"level":3,"decoyPool":["should","should had","should has"]}
+    {"id":"new-gap-1","type":"gap","lang":"en","sentence":"They ___ gone home already.","answers":["should've","should have"],"distractors":["should of"],"translation":{"fi":"Heidän olisi pitänyt lähteä kotiin jo."},"level":3,"decoyPool":["should","should had","should has"]}
   ]
 }

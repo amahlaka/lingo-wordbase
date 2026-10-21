@@ -23,8 +23,8 @@ and anything political, religious, sexual or about violence.
 - **Finnish** is natural standard Finnish (yleiskieli), the way an adult would
   say it, not word-for-word. Use the spoken form only in a dialogue between
   friends, and then mark the item `register: "informal"`.
-- New entries need only `en` and `fi`. Leave other languages out rather than
-  guessing.
+- Entries are `en` and `fi` only; the word base has no other languages for
+  now. Don't add one without its entry in `languages.json`.
 - Keep sentences short: up to about 12 words for level 1-2, up to about 20 for
   level 3. One idea per sentence.
 - Never invent facts about real companies or people. Use common Finnish and
