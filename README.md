@@ -3,7 +3,7 @@
 Everything the [Lingo](https://github.com/amahlaka/lingo-hangman) games
 practise lives here as JSON: words and phrases, fill-the-gap sentences,
 grammar rules, words that get mixed up, word groups, pronunciation lessons
-and tips, short texts, and the list of languages.
+and tips, short texts, textbook lessons, and the list of languages.
 
 **Adding or changing entries? Read [AUTHORING.md](AUTHORING.md) first.** It
 says who the entries are for, how to write the English and Finnish, and how to
@@ -11,7 +11,8 @@ fill in levels and metadata. This repository holds only data; the app and its de
 live in lingo-hangman, so access to edit words never gives access to code.
 
 ```
-  index.json        which packs are used, in order, and category names
+  index.json        which packs are used, in order, category names and
+                    the chapters of the textbook lessons
   languages.json    languages words can be translated into
   packs/<id>.json   the items, grouped into packs by theme
 ```
@@ -276,3 +277,26 @@ is English and Finnish for now; another language (Japanese, say) is added
 by listing it here and giving items a `text` in its code.
 
 The checks are in lingo-hangman's `src/lib/contentSchema.js`.
+
+### `lesson`: a textbook lesson
+
+```json
+{ "id": "lesson-ck-or-k", "type": "lesson", "chapter": "spelling",
+  "title": { "en": "ck or k: the short vowel rule", "fi": "ck vai k: lyhyen vokaalin sääntö" },
+  "summary": { "en": "...", "fi": "..." },
+  "blocks": [
+    { "type": "text", "text": { "en": "...", "fi": "..." } },
+    { "type": "choice", "question": { "en": "What comes just before the k sound?", "fi": "..." },
+      "options": [
+        { "answer": { "en": "One short vowel letter", "fi": "..." }, "result": "ck", "words": ["ba[ck]", "du[ck]"] },
+        { "answer": { "en": "Anything else", "fi": "..." }, "result": "k", "words": ["boo[k]", "mil[k]"] }
+      ] },
+    { "type": "remember", "text": { "en": "c comes before k: always ck, never kc.", "fi": "..." } }
+  ],
+  "practice": [{ "game": "sounds", "set": "spell-ck-k" }, { "game": "type-it" }] }
+```
+
+`chapter` names one of `lessonChapters` in `index.json`
+(`[{ "id", "title": { "en", "fi" }, "summary" }]`, in reading order). The
+block types (`text`, `remember`, `words`, `letters`, `choice`, `compare`,
+`stress`, `sentence`) are described in [AUTHORING.md](AUTHORING.md).

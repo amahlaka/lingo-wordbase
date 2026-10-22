@@ -14,7 +14,8 @@
     "games-and-pop-culture",
     "video-and-media",
     "smart-home",
-    "same-answers"
+    "same-answers",
+    "lessons"
   ],
   "categories": {
     "adjective": {
@@ -292,6 +293,41 @@
         "adjective",
         "pronoun"
       ]
+    }
+  ],
+  "lessonChapters": [
+    {
+      "id": "how-english-works",
+      "title": {
+        "en": "How English works",
+        "fi": "Näin englanti toimii"
+      },
+      "summary": {
+        "en": "The big differences from Finnish, explained once.",
+        "fi": "Suurimmat erot suomeen, selitettynä kerralla."
+      }
+    },
+    {
+      "id": "letters",
+      "title": {
+        "en": "Letters and sounds",
+        "fi": "Kirjaimet ja äänteet"
+      },
+      "summary": {
+        "en": "What the letters say, and the ones Finns mix up.",
+        "fi": "Miten kirjaimet ääntyvät ja mitkä niistä suomalaiset sekoittavat."
+      }
+    },
+    {
+      "id": "spelling",
+      "title": {
+        "en": "Spelling memory rules",
+        "fi": "Oikeinkirjoituksen muistisäännöt"
+      },
+      "summary": {
+        "en": "Short rules that tell you how to write a word you hear.",
+        "fi": "Lyhyitä sääntöjä, joiden avulla kuulemasi sanan osaa kirjoittaa."
+      }
     }
   ]
 }

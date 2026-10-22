@@ -321,6 +321,40 @@ have a partner; the check reports one left on its own.
   from other dialogues as wrong replies, so the scene must make it clear
   which one fits here. Don't give away the learner's lines word for word.
 
+- `lesson` (pack `lessons`): a textbook lesson, read on the Lessons page
+  (/lessons) and linked from Home. A short read, three to six blocks, on one
+  thing: how English differs from Finnish, what letters say, or a spelling
+  memory rule. Show the rule rather than describe it: prefer a picture block
+  over a long `text`, and end with one `remember` box. `chapter` is one of
+  the `lessonChapters` in `index.json`; lessons are read in pack order, so
+  put a new one where it belongs in its chapter. `title` needs `en` and `fi`;
+  `summary` is one line for the lesson list. Blocks (each has a `type`):
+  - `text`: `{ "en", "fi" }`, a paragraph. English examples between
+    asterisks, as in explanations.
+  - `remember`: the memory rule, shown in a highlighted box.
+  - `words`: English words to tap and hear, `[ ]` around the letters the
+    lesson is about (`"ba[ck]"`), with an optional `caption`.
+  - `letters`: a table, one row per letter or letter group: `letters`
+    ("th"), `sound` (`{ "en", "fi" }`, what it sounds like, readings between
+    asterisks) and `words`. `"silent": true` draws the letters crossed out.
+  - `choice`: a "which spelling?" chart: a `question` and two or three
+    `options`, each an `answer`, the `result` it leads to (a spelling or
+    sound such as `"ck"`, or `{ "en", "fi" }` for words) and `words`.
+  - `compare`: two `columns` side by side, each with a `title`, the `lang`
+    of its lines (`"en"` lines can be tapped to hear) and `lines`, `[ ]`
+    around the parts to compare; optional `caption`.
+  - `stress`: words split into syllables with `·`, the stressed one in
+    brackets: `"ba·[na]·na"`.
+  - `sentence`: one sentence shown word by word with its word types: `en`,
+    `fi` and `wordTypes`, as for rule examples.
+  `practice` lists games that practise the lesson: `{ "game": "sounds",
+  "set": "spell-ck-k" }`, where `game` is a game id in lingo-hangman's
+  `src/games/registry.js` and `set` (optional) the id of a Sounds of English
+  lesson (`sounds`), grammar rule (`grammar`), mixed-up topic (`mixed-up`)
+  or text (`read`, `talk`). A Sounds of English lesson that a textbook lesson
+  links to shows a "Read the lesson" link back. Facts about English must be
+  right for US English; when a rule has common exceptions, name them.
+
 ## Packs
 
 - `everyday-words`, `everyday-phrases`: the original basics.
@@ -330,6 +364,7 @@ have a partner; the check reports one left on its own.
 - `grammar`, `mixed-up-words`, `word-groups`, `pronunciation`: as named.
 - `read-aloud`: `passage` items for Say it right's Read aloud.
 - `texts`: `text` items.
+- `lessons`: `lesson` items, the textbook, in reading order.
 - `games-and-pop-culture`: every item type on video games, tabletop
   role-playing, internet culture and pop culture (categories `video-games`,
   `tabletop-rpg`, `internet-culture`, `pop-culture`; an item can have several).
