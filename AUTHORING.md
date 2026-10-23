@@ -23,8 +23,8 @@ and anything political, religious, sexual or about violence.
 - **Finnish** is natural standard Finnish (yleiskieli), the way an adult would
   say it, not word-for-word. Use the spoken form only in a dialogue between
   friends, and then mark the item `register: "informal"`.
-- Entries are `en` and `fi` only; the word base has no other languages for
-  now. Don't add one without its entry in `languages.json`.
+- New entries need only `en` and `fi`. Leave other languages out rather than
+  guessing.
 - Keep sentences short: up to about 12 words for level 1-2, up to about 20 for
   level 3. One idea per sentence.
 - Never invent facts about real companies or people. Use common Finnish and
@@ -320,51 +320,22 @@ have a partner; the check reports one left on its own.
   pharmacy, so you stop a woman to ask the way."). Your turn mixes in lines
   from other dialogues as wrong replies, so the scene must make it clear
   which one fits here. Don't give away the learner's lines word for word.
-  Give a story (or any text) `parts` on its sentences to put it in Story
-  words, where the learner picks the Finnish meaning of each word or phrase:
-  `"parts": [{ "en": "Laura" }, { "en": "gets up", "fi": "herää", "wrong":
-  ["menee nukkumaan", "istuu alas"] }, …]`. The parts are the sentence's
-  words in order (punctuation left out). Group words that mean one thing
-  together (*gets up*, *at half past six*, *filled out a form*). A part with
-  `fi` is asked: `fi` is its meaning in this sentence, as the sentence's
-  Finnish says it, and `wrong` one or two believable Finnish meanings that
-  are clearly wrong here (the typical Finnish slip, *puoli kuudelta* for
-  *half past six*, is a good one). Leave `fi` off names and small words not
-  worth asking (*Laura*, *and*, *she*). A text needs three asked parts.
-
-- `lesson` (pack `lessons`): a textbook lesson, read on the Lessons page
-  (/lessons) and linked from Home. A short read, three to six blocks, on one
-  thing: how English differs from Finnish, what letters say, or a spelling
-  memory rule. Show the rule rather than describe it: prefer a picture block
-  over a long `text`, and end with one `remember` box. `chapter` is one of
-  the `lessonChapters` in `index.json`; lessons are read in pack order, so
-  put a new one where it belongs in its chapter. `title` needs `en` and `fi`;
-  `summary` is one line for the lesson list. Blocks (each has a `type`):
-  - `text`: `{ "en", "fi" }`, a paragraph. English examples between
-    asterisks, as in explanations.
-  - `remember`: the memory rule, shown in a highlighted box.
-  - `words`: English words to tap and hear, `[ ]` around the letters the
-    lesson is about (`"ba[ck]"`), with an optional `caption`.
-  - `letters`: a table, one row per letter or letter group: `letters`
-    ("th"), `sound` (`{ "en", "fi" }`, what it sounds like, readings between
-    asterisks) and `words`. `"silent": true` draws the letters crossed out.
-  - `choice`: a "which spelling?" chart: a `question` and two or three
-    `options`, each an `answer`, the `result` it leads to (a spelling or
-    sound such as `"ck"`, or `{ "en", "fi" }` for words) and `words`.
-  - `compare`: two `columns` side by side, each with a `title`, the `lang`
-    of its lines (`"en"` lines can be tapped to hear) and `lines`, `[ ]`
-    around the parts to compare; optional `caption`.
-  - `stress`: words split into syllables with `·`, the stressed one in
-    brackets: `"ba·[na]·na"`.
-  - `sentence`: one sentence shown word by word with its word types: `en`,
-    `fi` and `wordTypes`, as for rule examples.
-  `practice` lists games that practise the lesson: `{ "game": "sounds",
-  "set": "spell-ck-k" }`, where `game` is a game id in lingo-hangman's
-  `src/games/registry.js` and `set` (optional) the id of a Sounds of English
-  lesson (`sounds`), grammar rule (`grammar`), mixed-up topic (`mixed-up`)
-  or text (`read`, `talk`). A Sounds of English lesson that a textbook lesson
-  links to shows a "Read the lesson" link back. Facts about English must be
-  right for US English; when a rule has common exceptions, name them.
+  Pieces of classic stories go in the `classic-stories` pack, where Translate
+  the story has the learner translate them phrase by phrase. Use only stories
+  in the public domain (Aesop's fables in Townsend's 1867 translation, Grimm
+  in Margaret Hunt's 1884 translation, Beatrix Potter, Lewis Carroll…), keep
+  the original's words where a learner can follow them and shorten or modernize
+  the rest, with US spelling (*vest*, not *waistcoat*). Give the item a
+  `source` in English and Finnish naming the original ("Adapted from … by …
+  (1902).") and leave out `questions`. Split every sentence into `phrases`
+  of a few words that belong together, each with `en`, `fi` and one or two
+  `wrong` translations: `{ "en": "Once upon a time", "fi": "Olipa kerran",
+  "wrong": ["Kerran ajassa", "Eräänä aamuna"] }`. The phrases in order must
+  make the sentence's `en` and its `fi`, punctuation included, so pick the
+  cut points where the Finnish can follow the English order. A good wrong
+  translation is the slip a Finn would make: a literal translation, a
+  false friend (*bank* as *pankki*), the wrong tense or the passive turned
+  round (*was woken up* as *herätti*). It must be clearly wrong here.
 
 ## Packs
 
@@ -375,7 +346,8 @@ have a partner; the check reports one left on its own.
 - `grammar`, `mixed-up-words`, `word-groups`, `pronunciation`: as named.
 - `read-aloud`: `passage` items for Say it right's Read aloud.
 - `texts`: `text` items.
-- `lessons`: `lesson` items, the textbook, in reading order.
+- `classic-stories`: `text` items with `phrases` and a `source`: pieces of
+  public-domain classic stories for Translate the story.
 - `games-and-pop-culture`: every item type on video games, tabletop
   role-playing, internet culture and pop culture (categories `video-games`,
   `tabletop-rpg`, `internet-culture`, `pop-culture`; an item can have several).
