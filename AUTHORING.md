@@ -320,6 +320,17 @@ have a partner; the check reports one left on its own.
   pharmacy, so you stop a woman to ask the way."). Your turn mixes in lines
   from other dialogues as wrong replies, so the scene must make it clear
   which one fits here. Don't give away the learner's lines word for word.
+  Give a story (or any text) `parts` on its sentences to put it in Story
+  words, where the learner picks the Finnish meaning of each word or phrase:
+  `"parts": [{ "en": "Laura" }, { "en": "gets up", "fi": "herää", "wrong":
+  ["menee nukkumaan", "istuu alas"] }, …]`. The parts are the sentence's
+  words in order (punctuation left out). Group words that mean one thing
+  together (*gets up*, *at half past six*, *filled out a form*). A part with
+  `fi` is asked: `fi` is its meaning in this sentence, as the sentence's
+  Finnish says it, and `wrong` one or two believable Finnish meanings that
+  are clearly wrong here (the typical Finnish slip, *puoli kuudelta* for
+  *half past six*, is a good one). Leave `fi` off names and small words not
+  worth asking (*Laura*, *and*, *she*). A text needs three asked parts.
 
 - `lesson` (pack `lessons`): a textbook lesson, read on the Lessons page
   (/lessons) and linked from Home. A short read, three to six blocks, on one
