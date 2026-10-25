@@ -320,6 +320,22 @@ have a partner; the check reports one left on its own.
   pharmacy, so you stop a woman to ask the way."). Your turn mixes in lines
   from other dialogues as wrong replies, so the scene must make it clear
   which one fits here. Don't give away the learner's lines word for word.
+  Pieces of classic stories go in the `classic-stories` pack, where Translate
+  the story has the learner translate them phrase by phrase. Use only stories
+  in the public domain (Aesop's fables in Townsend's 1867 translation, Grimm
+  in Margaret Hunt's 1884 translation, Beatrix Potter, Lewis Carroll…), keep
+  the original's words where a learner can follow them and shorten or modernize
+  the rest, with US spelling (*vest*, not *waistcoat*). Give the item a
+  `source` in English and Finnish naming the original ("Adapted from … by …
+  (1902).") and leave out `questions`. Split every sentence into `phrases`
+  of a few words that belong together, each with `en`, `fi` and one or two
+  `wrong` translations: `{ "en": "Once upon a time", "fi": "Olipa kerran",
+  "wrong": ["Kerran ajassa", "Eräänä aamuna"] }`. The phrases in order must
+  make the sentence's `en` and its `fi`, punctuation included, so pick the
+  cut points where the Finnish can follow the English order. A good wrong
+  translation is the slip a Finn would make: a literal translation, a
+  false friend (*bank* as *pankki*), the wrong tense or the passive turned
+  round (*was woken up* as *herätti*). It must be clearly wrong here.
 
 - `lesson` (pack `lessons`): a textbook lesson, read on the Lessons page
   (/lessons) and linked from Home. A short read, three to six blocks, on one
@@ -364,6 +380,8 @@ have a partner; the check reports one left on its own.
 - `grammar`, `mixed-up-words`, `word-groups`, `pronunciation`: as named.
 - `read-aloud`: `passage` items for Say it right's Read aloud.
 - `texts`: `text` items.
+- `classic-stories`: `text` items with `phrases` and a `source`: pieces of
+  public-domain classic stories for Translate the story.
 - `lessons`: `lesson` items, the textbook, in reading order.
 - `games-and-pop-culture`: every item type on video games, tabletop
   role-playing, internet culture and pop culture (categories `video-games`,
